@@ -1,0 +1,76 @@
+{%include 'header.html'%}
+<!-- Main content -->
+<div class="content-wrapper">
+  <!-- Content area -->
+  <div class="content">
+    <!-- Dashboard content -->
+    <div class="row">
+      <div class="col-md-12">
+        <!-- Basic datatable -->
+        <div class="panel panel-default">
+          <div class="panel-heading text-left">
+            <div class="row">
+              <div class="col-sm-6 text-left">
+                <span class="glyphicon glyphicon-home" aria-hidden="true"></span><b class="">&nbsp; DETAIL PENGGUNA</b><br>
+              </div>
+              <div class="col-md-6 text-right">
+
+              </div>
+            </div>
+          </div>
+          <div class="panel-body">
+            <fieldset class="content-group">
+                 <center>
+                <!-- <img src="foto/default.png" alt="<?php echo $user->nama_pelanggan; ?>" class="img-circle" width="176"> -->
+                <img src="{{url_for('static',filename='assets/images/default.png')}}" alt="Hello" class="img-circle" width="176">
+
+                <br>
+                <b>
+
+                </b>
+              </center>
+              <hr>
+              <table class="table table-xs table-striped table-bordered">
+                <tr>
+                  <th width="30%"><b>NIP</b></th>
+                  <td width="2%"><b>:</b></td>
+                  <td>{{data.nip}}</td>
+                </tr>
+                <tr>
+                  <th><b>Nama Lengkap</b></th>
+                  <td><b>:</b></td>
+                  <td> {{data.nama_pegawai}}</td>
+                </tr>
+                <tr>
+                  <th><b>Jenis Kelamin</b></th>
+                  <td><b>:</b></td>
+                  <td>{{data.jenis_kelamin}}</td>
+                </tr>
+                <tr>
+                  <th><b>Jabatan</b></th>
+                  <td><b>:</b></td>
+                  <td>{{data.jabatan}}</td>
+                </tr>
+                <tr>
+                  <th><b>Alamat</b></th>
+                  <td><b>:</b></td>
+                  <td> {{data.alamat}}</td>
+                </tr>
+                <tr>
+                  <th><b>Nilai</b></th>
+                  <td><b>:</b></td>
+                  <td> {{data.nilai}}</td>
+                </tr>
+              </table>
+              <hr>
+              <a href="{{url_for('pegawai')}}" class="btn btn-xs btn-success"><span class="glyphicon glyphicon-circle-arrow-left"></span>&nbsp;<b> KEMBALI</b></a>
+              
+
+
+            </fieldset>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /dashboard content -->
+{%include 'footer.html'%}

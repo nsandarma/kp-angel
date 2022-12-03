@@ -1,0 +1,88 @@
+{% include "header.html"%}
+            <!-- Main content -->
+            <div class="content-wrapper">
+                <!-- Content area -->
+                <div class="content">
+                    <!-- Dashboard content -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <!-- Basic datatable -->
+                            <div class="panel panel-default">
+                                <div class="panel-heading text-left">
+                                    <div class="row">
+                                        <div class="text-center">
+                                            <h2 class=""><span class="glyphicon glyphicon-home"
+                                                    aria-hidden="true"></span><b class="">&nbsp; BMKG LHOKSEUMAWE
+                                                </b><br>DATA PEGAWAI</h2>
+                                        </div>
+                                        <div class="col-md-6 text-right">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel-body" style="margin-top: -20px;">
+                                    <a href="{{url_for('tambah_pegawai')}}" class="btn btn-success btn-lg text-bold btn-block"><i class="icon-users"></i> Tambah Data Pegawai</a>
+                                    <table
+                                        class="table table-xs table-hover table-striped table-bordered datatable-basic">
+                                        <thead>
+                                            <tr>
+                                                <th width="30px;">No.</th>
+                                                <th>NIP</th>
+                                                <th>Nama Lengkap</th>
+                                                <th>Jenis Kelamin</th>
+                                                <th>Alamat</th>
+                                                <th>Jabatan</th>
+                                                <th>Keterangan</th>
+                                                <th class="text-center" width="140px">Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {%for i in data%}
+                                            <tr>
+                                                <td class="text-center">
+                                                    {{loop.index}}
+                                                </td>
+                                                <td>
+                                                    {{i.nip}}
+                                                </td>
+                                                <td>
+                                                    {{i.nama_pegawai}}
+                                                </td>
+                                                <td>
+                                                    {{i.jenis_kelamin}}
+                                                </td>
+                                                <td>
+                                                    {{i.alamat}}
+                                                </td>
+                                                <td>
+                                                    {{i.jabatan}}
+                                                </td>
+                                                <td>
+                                                    {{i.nilai}}
+                                                </td>
+
+                                                <td class="text-center">
+                                                    <a href="pegawai/detail-pegawai/{{i.nip}}"
+                                                        class="btn btn-info btn-xs"><i class="icon-eye"></i></a>
+                                                    <a href="pegawai/edit-pegawai/{{i.nip}}"
+                                                        class="btn btn-success btn-xs"><i class="icon-pencil7"></i></a>
+                                                    <a href="pegawai/hapus-pegawai/{{i.nip}}"
+                                                        class="btn btn-danger btn-xs"
+                                                        onclick="return confirm('Apakah Anda yakin?')"><i
+                                                            class="icon-trash"></i></a>
+                                                </td>
+                                            </tr>
+                                            {%endfor%}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /basic datatable -->
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- /dashboard content -->
+
+{%include "footer.html"%}

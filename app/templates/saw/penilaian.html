@@ -1,0 +1,58 @@
+{%include "header.html"%}
+<!-- Main content -->
+<div class="content-wrapper">
+    <!-- Content area -->
+    <div class="content">
+
+        <!-- Dashboard content -->
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <div class="panel panel-flat">
+
+                    <div class="panel-body">
+
+                        <fieldset class="content-group">
+                            <legend class="text-bold"><i class="icon-user"></i>Penilaian</legend>
+
+                            <form class="form-horizontal" action="" method="post">
+                                <div class="form-group">
+                                    <label for="" class="control-label col-lg-3">Pegawai</label>
+                                    <div class="col-lg-9">
+                                        <select name="user" class="form-control bg-info text-bold" required>
+                                            <option value="">------ PILIH PEGAWAI -------</option>
+                                            {%for i in dp %}
+                                            <option value="{{i.id_pegawai}}">{{i.nip}} - {{i.nama_pegawai}}</option>
+                                            
+                                            {%endfor%}
+                                        </select>
+                                    </div>
+                                </div>
+                                {%for i in kr %}
+                                <div class="form-group">
+                                    <label class="control-label col-lg-3">{{i.nama_kriteria}}</label>
+                                    <div class="col-lg-9">
+                                        <input type="number" name="{{i.nama_kriteria}}" class="form-control" value="" placeholder="0-100"
+                                            maxlength="100" required>
+                                    </div>
+                                </div>
+                                {%endfor%}
+
+                                
+
+                                <a href="{{url_for('pegawai')}}" class="btn btn-default">
+                                    << Kembali</a>
+                                        <button type="submit" name="btnsimpan" class="btn btn-success"
+                                            style="float:right;">Simpan</button>
+                            </form>
+
+                        </fieldset>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /dashboard content -->
+        {%include "footer.html"%}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>PENILAIN PEGAWAI BMKG</title>
+	<link rel="icon" type="image/png" href="{{url_for('static',filename='assets/images/Logo-BMKG-new.png')}}">
+	<!-- Global stylesheets -->
+	<link href="{{url_for('static',filename='/')}}assets/css/icons/icomoon/styles.css" rel="stylesheet" type="text/css">
+	<link href="{{url_for('static',filename='/')}}assets/css/bootstrap.css" rel="stylesheet" type="text/css">
+	<link href="{{url_for('static',filename='/')}}assets/css/login.css" rel="stylesheet" type="text/css" />
+	<!-- /global stylesheets -->
+</head>
+
+<body class="login-container">
+	<!-- Page container -->
+	<div class="page-container">
+		<!-- Page content -->
+		<div class="page-content">
+			<!-- Main content -->
+			<div class="content-wrapper">
+				<!-- Content area -->
+				<div class="content">
+					<nav class="navbar navbar-inverse navbar-fixed-top">
+						<div class="col-md-12">
+							<div class="navbar-header">
+								<ul class="nav navbar-nav navbar-center">
+									<li><a href="javascript:void(0)"><span class='glyphicon glyphicon-globe'
+												aria-hidden='true'></span>&nbsp;<b>PPBMKG</b></a></li>
+								</ul>
+							</div>
+						</div>
+					</nav>
+					<div class="kontainer">
+						<div class="kotak">
+							
+							<div class="wrapper">
+								<p style="padding: 20px 10px; text-align-last: center;">
+									<img src="{{url_for('static',filename='assets/images/Logo-BMKG-new.png')}}" height="100">
+								</p>
+								<div class="title1"><span>LOGIN PPBMKG</span></div>
+								<form action="" method="post">
+									<div class="row">
+										<i class="icon-user-lock"></i>
+										<input type="text" required="" autofocus="" name="username"
+											placeholder="Username" class="form-control flat">
+									</div>
+									<div class="row">
+										<i class="icon-lock2"></i>
+										<input type="password" required="" name="password" placeholder="Password"
+											class="form-control flat">
+									</div>
+									<div class="row text-center" style="margin-bottom: -12px;">
+										<button type="submit" name="btnlogin" class="btn btn-login"><span
+												class="fa fa-random"></span> &nbsp;<b>LOGIN</b></button>
+									</div>
+
+								</form>
+							</div>
+							</br>
+							<!-- Footer -->
+							<div class="footer text-muted text-center">
+								&copy; 2022. <a href="" class="text-success"><b>PPMBKG</b></a>
+							</div>
+							<!-- /footer -->
+						</div>
+						<!-- /content area -->
+					</div>
+					<!-- /main content -->
+				</div>
+				<!-- /page content -->
+			</div>
+			<!-- /page container -->
+</body>
+
+</html>
